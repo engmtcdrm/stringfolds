@@ -10,14 +10,34 @@ Package stringfolds provides case\-insensitive versions of functions in the stan
 
 ## Index
 
+- [func CutPrefixFold\(s, prefix string\) \(after string, found bool\)](<#CutPrefixFold>)
+- [func CutSuffixFold\(s, suffix string\) \(before string, found bool\)](<#CutSuffixFold>)
 - [func HasPrefixFold\(s, prefix string\) bool](<#HasPrefixFold>)
 - [func HasSuffixFold\(s, suffix string\) bool](<#HasSuffixFold>)
 - [func TrimPrefixFold\(s, prefix string\) string](<#TrimPrefixFold>)
 - [func TrimSuffixFold\(s, suffix string\) string](<#TrimSuffixFold>)
 
 
+<a name="CutPrefixFold"></a>
+## func [CutPrefixFold](<https://github.com/engmtcdrm/stringfolds/blob/main/stringfolds.go#L8>)
+
+```go
+func CutPrefixFold(s, prefix string) (after string, found bool)
+```
+
+CutPrefixFold is a case\-insensitive version of [strings.CutPrefix](<https://pkg.go.dev/strings/#CutPrefix>).
+
+<a name="CutSuffixFold"></a>
+## func [CutSuffixFold](<https://github.com/engmtcdrm/stringfolds/blob/main/stringfolds.go#L21>)
+
+```go
+func CutSuffixFold(s, suffix string) (before string, found bool)
+```
+
+CutSuffixFold is a case\-insensitive version of [strings.CutSuffix](<https://pkg.go.dev/strings/#CutSuffix>).
+
 <a name="HasPrefixFold"></a>
-## func [HasPrefixFold](<https://github.com/engmtcdrm/stringfolds/blob/main/stringfolds.go#L8>)
+## func [HasPrefixFold](<https://github.com/engmtcdrm/stringfolds/blob/main/stringfolds.go#L34>)
 
 ```go
 func HasPrefixFold(s, prefix string) bool
@@ -26,7 +46,7 @@ func HasPrefixFold(s, prefix string) bool
 HasPrefixFold is a case\-insensitive version of [strings.HasPrefix](<https://pkg.go.dev/strings/#HasPrefix>).
 
 <a name="HasSuffixFold"></a>
-## func [HasSuffixFold](<https://github.com/engmtcdrm/stringfolds/blob/main/stringfolds.go#L18>)
+## func [HasSuffixFold](<https://github.com/engmtcdrm/stringfolds/blob/main/stringfolds.go#L48>)
 
 ```go
 func HasSuffixFold(s, suffix string) bool
@@ -35,7 +55,7 @@ func HasSuffixFold(s, suffix string) bool
 HasSuffixFold is a case\-insensitive version of [strings.HasSuffix](<https://pkg.go.dev/strings/#HasSuffix>).
 
 <a name="TrimPrefixFold"></a>
-## func [TrimPrefixFold](<https://github.com/engmtcdrm/stringfolds/blob/main/stringfolds.go#L28>)
+## func [TrimPrefixFold](<https://github.com/engmtcdrm/stringfolds/blob/main/stringfolds.go#L62>)
 
 ```go
 func TrimPrefixFold(s, prefix string) string
@@ -44,7 +64,7 @@ func TrimPrefixFold(s, prefix string) string
 TrimPrefixFold is a case\-insensitive version of [strings.TrimPrefix](<https://pkg.go.dev/strings/#TrimPrefix>).
 
 <a name="TrimSuffixFold"></a>
-## func [TrimSuffixFold](<https://github.com/engmtcdrm/stringfolds/blob/main/stringfolds.go#L42>)
+## func [TrimSuffixFold](<https://github.com/engmtcdrm/stringfolds/blob/main/stringfolds.go#L80>)
 
 ```go
 func TrimSuffixFold(s, suffix string) string

@@ -11,6 +11,14 @@ import (
 
 var AllExamples = []eggy.Example{
 	{
+		Name: "CutPrefixFold",
+		Fn:   ExampleCutPrefixFold,
+	},
+	{
+		Name: "CutSuffixFold",
+		Fn:   ExampleCutSuffixFold,
+	},
+	{
 		Name: "HasPrefixFold",
 		Fn:   ExampleHasPrefixFold,
 	},
@@ -26,6 +34,34 @@ var AllExamples = []eggy.Example{
 		Name: "TrimSuffixFold",
 		Fn:   ExampleTrimSuffixFold,
 	},
+}
+
+func ExampleCutPrefixFold() {
+	example1Result, example1Found := stringfolds.CutPrefixFold("Hello, World!", "hello")
+	example2Result, example2Found := stringfolds.CutPrefixFold("Hello, World!", "HELLO")
+	example3Result, example3Found := stringfolds.CutPrefixFold("Hello, World!", "world")
+	example4Result, example4Found := stringfolds.CutPrefixFold("Hello, World!", "WORLD")
+
+	fmt.Println(pp.Cyan("CutPrefixFold") + " examples:")
+	fmt.Println()
+	fmt.Printf("  1. %s returns %q and found = %v\n", pp.Green("stringfolds.CutPrefixFold(\"Hello, World!\", \"hello\")"), example1Result, example1Found)
+	fmt.Printf("  2. %s returns %q and found = %v\n", pp.Green("stringfolds.CutPrefixFold(\"Hello, World!\", \"HELLO\")"), example2Result, example2Found)
+	fmt.Printf("  3. %s returns %q and found = %v\n", pp.Green("stringfolds.CutPrefixFold(\"Hello, World!\", \"world\")"), example3Result, example3Found)
+	fmt.Printf("  4. %s returns %q and found = %v\n", pp.Green("stringfolds.CutPrefixFold(\"Hello, World!\", \"WORLD\")"), example4Result, example4Found)
+}
+
+func ExampleCutSuffixFold() {
+	example1Result, example1Found := stringfolds.CutSuffixFold("Hello, World!", "hello")
+	example2Result, example2Found := stringfolds.CutSuffixFold("Hello, World!", "HELLO")
+	example3Result, example3Found := stringfolds.CutSuffixFold("Hello, World!", "world!")
+	example4Result, example4Found := stringfolds.CutSuffixFold("Hello, World!", "WORLD!")
+
+	fmt.Println(pp.Cyan("CutSuffixFold") + " examples:")
+	fmt.Println()
+	fmt.Printf("  1. %s returns %q and found = %v\n", pp.Green("stringfolds.CutSuffixFold(\"Hello, World!\", \"hello\")"), example1Result, example1Found)
+	fmt.Printf("  2. %s returns %q and found = %v\n", pp.Green("stringfolds.CutSuffixFold(\"Hello, World!\", \"HELLO\")"), example2Result, example2Found)
+	fmt.Printf("  3. %s returns %q and found = %v\n", pp.Green("stringfolds.CutSuffixFold(\"Hello, World!\", \"world!\")"), example3Result, example3Found)
+	fmt.Printf("  4. %s returns %q and found = %v\n", pp.Green("stringfolds.CutSuffixFold(\"Hello, World!\", \"WORLD!\")"), example4Result, example4Found)
 }
 
 func ExampleHasPrefixFold() {
