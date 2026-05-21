@@ -1,12 +1,13 @@
-module example.com/examples
+module github.com/engmtcdrm/stringfolds/examples
 
-go 1.25
+go 1.25.10
 
-// replace github.com/engmtcdrm/<repo-name> => ../
+replace github.com/engmtcdrm/stringfolds => ../
 
 require (
 	github.com/engmtcdrm/go-eggy v0.0.0-20251226021541-1678943592e5
 	github.com/engmtcdrm/go-prettyprint v1.2.0
+	github.com/engmtcdrm/stringfolds v0.0.0-00010101000000-000000000000
 )
 
 require (
